@@ -29,9 +29,28 @@ public class SampleController {
 	
 	@RequestMapping(value="/createAccount")
 	public String createAccount(@ModelAttribute("newAccount") Account account) {
-		System.out.println(account.getFirstName()+" "+account.getLastName()+" "+account.getEmail());
 		
 		return "createAccount";
+	}
+	
+	
+	@RequestMapping(value="/result")
+	public String createAccountResult(@ModelAttribute("newAccount") Account account,
+			Model result) {
+		System.out.println(account.getFirstName()+" "+account.getLastName()+" "+account.getEmail());
+		
+		if(account.getFirstName() != null && !account.getFirstName().isEmpty()
+				&& account.getLastName()!=null && !account.getLastName().isEmpty()
+				&& account.getEmail() != null && !account.getEmail().isEmpty()) {
+			result.addAttribute("firstName",account.getFirstName());
+			result.addAttribute("lastName", account.getLastName());
+			result.addAttribute("email", account.getEmail());
+			result.addAttribute("creationResult","success");
+		}
+		else {
+			result.addAttribute("creationResult", "fail");
+		}
+		return "createAccountResult";
 	}
 
 }

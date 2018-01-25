@@ -12,7 +12,7 @@
 <body>
 
 	<h1>Enter details :</h1>
-	<form:form commandName="newAccount">
+	<form:form commandName="newAccount" action="result">
 		<table>
 			<tr><td>First Name : <form:input path="firstName" type="text" placeholder="Enter First Name" name="firstName"/></td></tr>
 			<tr><td>Last Name : <form:input path="lastName" type="text" placeholder="Enter Last Name" name="lastName" /></td></tr>
