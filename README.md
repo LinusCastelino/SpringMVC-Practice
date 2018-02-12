@@ -1,4 +1,4 @@
-# SpringMVC-Practice
+# SpringMVC-Sample-Webapp
 
 Sample Maven project demonstrating Spring MVC implementation. 
 
