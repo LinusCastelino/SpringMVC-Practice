@@ -1,2 +1,2 @@
 # SpringMVC-Practice
-Sample projects demonstrating Spring MVC implementation. 
+Sample project demonstrating Spring MVC implementation. 
